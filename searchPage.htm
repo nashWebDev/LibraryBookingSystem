@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="box" id="body1"><h1>BEREA GROUP COLLEGES</h1></div>
+    <div onclick="openNav()" id="openbtn" class="openingbtn">open</div>
+
+<!--side nav-->
+<div id="mySidenav" class="sidenav" >
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#name" id="user"  ></a>
+    <a href="#" > 
+    <details>
+        <summary>favorites</summary>
+        <p id="ViewableFav"></p>
+        <p></p>
+        
+    </details> 
+    </a>
+    <a href="catalogue.htm" target="_blank">Full catalogue</a>
+    <a href="#savedbooks">Saved</a>
+  </div>
+<div id="body2">
+<!---search bar-->
+
+<div class="truecenter">
+    <input type="text" id="myInput" onkeyup="search()"  placeholder="SEARCH BAR" title="type the title of your book">
+    <button onclick="fullsearch()">search</button>
+</div>
+
+<!--paging system-->
+<div >
+    <button onclick="" style="float: left;" class="pageBtn">prev</button>
+    <button onclick="" style="float: right;margin-left: 10px;" class="pageBtn">next</button>
+</div>                            
+
+<!--book catalogue-->
+<div class="catalogue" id="catalogue">
+    
+</div>
+
+
+
+
+
+
+
+
+<!--<div id="canvas"></div>-->
+</div>                                         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="searchPageScript.js"></script>
+</body>
+</html>
