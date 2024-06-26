@@ -1,4 +1,4 @@
-    var studId,email,Fname,valsFromLoginForm ,btc ,bct ,bookName;
+    var studId,email,Fname,valsFromLoginForm ,btc ,bct ,bookName ,rentdate ,returndate; 
 
     Fname = document.getElementById("name")
     studId = document.getElementById("studentId");
@@ -6,6 +6,7 @@
     btc = document.getElementById("btc")
     bct = document.getElementById("bct")
     bookName = document.getElementById("bookname")
+
 
 document.addEventListener("DOMContentLoaded",function(){ //LOADS INFO FROM LOGIN PAGE HERE,HENCE I WONT NEED MORE FORM VALIDATION SINCE IT WAS ALREADY VALIDATED ON THE LOGIN PAGE
     var bookTITLE = JSON.parse(localStorage.getItem("booktitle"))
@@ -44,6 +45,13 @@ function autofiller(){
         console.log("bct")
         prtcampus.innerHTML = "Campus : bct";
     }
+    rentdate = document.getElementById("rentDate").value
+    returndate = document.getElementById("returnDate").value
+    
+    prtrentdate.innerHTML = "pickup date : " + rentdate;
+    prtreturndate.innerHTML = "pickup date : " + returndate;
+
+
 }
 
 
