@@ -1,10 +1,11 @@
-    var studId,email,Fname,valsFromLoginForm ,btc ,bct;
+    var studId,email,Fname,valsFromLoginForm ,btc ,bct ,bookName;
 
     Fname = document.getElementById("name")
     studId = document.getElementById("studentId");
     email = document.getElementById("email")
     btc = document.getElementById("btc")
     bct = document.getElementById("bct")
+    bookName = document.getElementById("bookname")
 
 document.addEventListener("DOMContentLoaded",function(){ //LOADS INFO FROM LOGIN PAGE HERE,HENCE I WONT NEED MORE FORM VALIDATION SINCE IT WAS ALREADY VALIDATED ON THE LOGIN PAGE
     var bookTITLE = JSON.parse(localStorage.getItem("booktitle"))
@@ -18,6 +19,8 @@ document.addEventListener("DOMContentLoaded",function(){ //LOADS INFO FROM LOGIN
     studId.value=valsFromLoginForm.studentID
 
     email.value = valsFromLoginForm.email
+    bookName.value = bookTITLE.title
+    document.getElementById("formH").innerHTML = "Application form for "+bookTITLE.title 
 
 })
 
