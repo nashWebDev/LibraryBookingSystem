@@ -172,7 +172,7 @@ function search() {
         if(maxResults === 20){
             break
         }
-
+        
     }
 }
 
@@ -234,8 +234,6 @@ function openNav() {
     document.getElementById("body2").style.marginLeft = "250px";
     document.getElementById("body2").style.opacity="0.5"
     document.getElementById("openbtn").style.display = " none"
-    
-   
   }
   
   /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
@@ -248,9 +246,11 @@ function openNav() {
     document.getElementById("body2").style.marginLeft = "0";
     document.getElementById("body2").style.opacity="1"
 
-    document.getElementById("openbtn").style.display = " block"
+    document.getElementById("openbtn").style.display = "block"
   }
 
 //get total number of books,10 books a page so
 //function will surrons eveyr 10 books by a div ,so groups of 10,
 //when u press next ,priv div will change to display none,new div will change to block
+//footer to appear at bottom
+

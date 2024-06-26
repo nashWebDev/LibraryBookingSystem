@@ -10,7 +10,7 @@ var logform =document.getElementById("log")
         localStorage.setItem('loginFormvalsForBookingSystem' , JSON.stringify(bookingSystemLoginVal))
 
     window.location.href ='searchPage.htm'
-})
+})  
 
 
 //for book catalogue searchs system

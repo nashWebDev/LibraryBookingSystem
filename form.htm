@@ -9,30 +9,43 @@
 
     <div class="box"><h1>BEREA GROUP COLLEGES</h1></div>
 
-    <div class="center">
-        <h2>booking form</h2>
-    </div>
 
 
 <div class="stateofbook"><span id="title"> </span></div>
 
+<div class="wrap">
 
-    <form >
-    <input type="text" placeholder="name" required>
-    <input type="text" placeholder = " studentId" required>
-    <input type="text" placeholder="email"required>
-    <input type="radio" name="campus" value="btc">btc</input><br>
-    <input type="radio" name="campus" value="bct">bct</input><br>
+<form class="row" onkeyup="autofiller()">
+    <h2 class="center">booking form</h2>
+    <input type="text" placeholder="name" id="name" required>
+    <input type="text" placeholder =" studentId" id="studentId" required>
+    <input type="text" placeholder="email" id="email" required>
+    <input type="radio" name="campus" value="btc" id="btc" onclick="autofiller()">btc</input><br>
+    <input type="radio" name="campus" value="bct" id="bct" onclick="autofiller()">bct</input><br>
     <input type="date" id="rentDate" required>
     <input type="date" id="returnDate" required>
 <br>    
+
+</form> 
+<div class="row">
+    <h3 class="center">bgc </h3>
+<p class="textbox" id="prtname">Name :  </p>
+<p class="textbox" id="prtStudentId">studentId :  </p>
+<p class="textbox" id="prtEmail">email :  </p>
+<p class="textbox" id="prtcampus">campus :  </p>
+<p class="textbox" id="prtRentDate">rentDate :  </p>
+<p class="textbox" id="prtReturnDate">returnDate :  </p>
+
+</div>
+
+</div>
+
+<form>
 <div class="center">
     <input type="submit" value="submit">
 </div>
 
-    </form>
-
-
+</form>
 
     <div class="foot" id="foot">
         <p>&copy; 2024 BGC. All rights reserved.</p>    

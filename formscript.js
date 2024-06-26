@@ -1,14 +1,47 @@
-var bookTITLE = JSON.parse(localStorage.getItem("booktitle"))
+    var studId,email,Fname,valsFromLoginForm ,btc ,bct;
+
+    Fname = document.getElementById("name")
+    studId = document.getElementById("studentId");
+    email = document.getElementById("email")
+    btc = document.getElementById("btc")
+    bct = document.getElementById("bct")
+
+document.addEventListener("DOMContentLoaded",function(){ //LOADS INFO FROM LOGIN PAGE HERE,HENCE I WONT NEED MORE FORM VALIDATION SINCE IT WAS ALREADY VALIDATED ON THE LOGIN PAGE
+    var bookTITLE = JSON.parse(localStorage.getItem("booktitle"))
+    valsFromLoginForm = JSON.parse(localStorage.getItem("loginFormvalsForBookingSystem"))
+    console.log(valsFromLoginForm)    
     console.log(bookTITLE.title);
+    console.log(valsFromLoginForm.studentID)
 
-var studId,name,valsFromLoginForm;
+    document.getElementById("title").innerHTML = bookTITLE.title +" is abavailible"
 
-valsFromLoginForm = JSON.parse(localStorage.getItem("loginFormvalsForBookingSystem"))
-console.log(valsFromLoginForm)
+    studId.value=valsFromLoginForm.studentID
 
+    email.value = valsFromLoginForm.email
 
-document.getElementById("title").innerHTML = bookTITLE.title +" is abavailible"
+})
 
+function autofiller(){
+    var prtname, prtstudentID, prtemail , prtcampus , prtrentdate ,prtreturndate;
+    prtname = document.getElementById("prtname")
+    prtstudentID = document.getElementById("prtStudentId")
+    prtemail = document.getElementById("prtEmail")
+    prtcampus = document.getElementById("prtcampus")
+    prtrentdate = document.getElementById("prtRentDate")
+    prtreturndate = document.getElementById("prtReturnDate")
+
+    prtname.innerHTML ="Name : " +Fname.value;
+    prtstudentID.innerHTML = "Student ID : " + studId.value;
+    prtemail.innerHTML = "Email : " + email.value;
+
+    if (btc.checked) {
+        console.log("btc")
+        prtcampus.innerHTML = "Campus : btc";
+    } else if (bct.checked) {
+        console.log("bct")
+        prtcampus.innerHTML = "Campus : bct";
+    }
+}
 
 
 var rentdate,returndate;
@@ -25,4 +58,3 @@ function getBodyHeight() {
   }
 
   document.getElementById("foot").style.top = (getBodyHeight()/5)+"px";
-
