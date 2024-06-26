@@ -211,7 +211,7 @@ footer{/*bookviewing*/
     clear: both;
   }
 
-.catalogue{
+  .catalogue{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -221,16 +221,28 @@ footer{/*bookviewing*/
     width: 100%;
 }
 .bookbox{
+    background-size: contain;
     border: 1px solid black;
+    border-radius: 20px;
     padding: 5px;
     margin: 5px;
-    width: 15%;
+    width: 17%;
     height: 100%;
 }
 .imgConatainer{
-    border: 1px solid black;
+    border: 1px solid yellow;
+    text-align: center;
+    width: 100%;
+    height: 100%;
     margin:5px;
     padding: 5px;
+    
+}
+.booktitle{
+  text-align: center;
+  margin-top: 50%;
+  margin-bottom: 50%;
+  opacity: 0;
 }
 .stateofbook{
     border:2px solid black;

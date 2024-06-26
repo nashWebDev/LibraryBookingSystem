@@ -1,4 +1,13 @@
+var emailArray=[
+    "test@example.com",
+    "user123@gmail.com",
+    "john.doe@example.org",
+    "jane_doe@hotmail.com",
+    "info@website.com"
+];
+
 var logform =document.getElementById("log")
+
     logform.addEventListener("submit",function(event){
         event.preventDefault()
 
@@ -9,7 +18,12 @@ var logform =document.getElementById("log")
 
         localStorage.setItem('loginFormvalsForBookingSystem' , JSON.stringify(bookingSystemLoginVal))
 
-    window.location.href ='searchPage.htm'
+        if(emailArray.includes(email)){
+            window.location.href ='searchPage.htm'
+        }else{
+            alert("email is not officially registered by berea")
+        }
+    
 })  
 
 
