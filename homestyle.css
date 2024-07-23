@@ -1,0 +1,392 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('img/AbhayaLibre-Bold.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+:root {
+    --Bereablue: #27348b;
+    --white: #ffffff;
+    --bereagray:#6D6E71;
+  }
+
+  body{
+    background-image:url(img/BGCAppBackground3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+  }
+
+a{
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header{
+    margin: 0px;
+    width: 100%;
+    background-color: var(--Bereablue);
+    color: #ffffff;
+
+
+}
+header h1{
+    font-family: "CustomFont" , sans-serif;
+}
+
+header a{
+      transition: transform 1s ease;
+}
+
+header a:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+}
+.logo  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img{
+    clip-path: circle();
+    width: 80px;
+    height: 80px;
+}
+
+.centerbox{
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+.centerbox h1{
+    width: fit-content;
+}
+
+.centerbox nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.centerbox nav a{
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+
+}
+/* contents bar */
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 2000; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(15, 15, 15, 0.3);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.contents-bar{
+  display: none;
+}
+
+/* HOTTEST */
+.hottest{
+    background-color: red;
+    font-family:  "Montserrat", sans-serif;
+    text-align: center;
+    color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 5px;
+}
+
+
+
+.imgcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+.imgcon button{
+    border-radius: 50%;
+    padding: 15px;
+
+    border: none;
+    background:rgba(255, 255, 255, 0.7)
+}
+
+.imgcon img {
+    transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.imgcon img.pop {
+    transform: scale(1.2); /* Bigger scale for the popping effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imgcon img.lesspop {
+    transform: scale(1.05); /* Slightly bigger but less than the pop class */
+}
+
+
+
+/* search bar and the rest */
+.glassy-title {
+    color: white; /* Text color */
+    font-size: 3em; /* Adjust the size as needed */
+    text-align: center; /* Center the title */
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow for better readability */
+  
+    margin: 20px auto; /* Center horizontally with margin */
+  }
+  
+
+
+/* factuties */
+
+.spacer{
+  margin: 2%;
+}
+
+.row {
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  align-items: center;
+  background-image: linear-gradient( 90deg, rgb(0, 0, 255) , rgb(4, 192, 255 ,0.9)), url(img/Pattern.png);
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-repeat: repeat;
+  transition: all 2s;
+}
+.Msidehead{
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+
+  height: 15%;
+  width: 100%;
+  color: white;
+  margin-bottom: none;
+
+}
+.Msidehead img{
+  margin: 0;
+  padding:0;
+  height: 100%;
+  width: 30%;
+  clip-path:fill-box;
+}
+.Msidehead h3{
+  display: flex;
+  
+  margin: 0;
+  padding: 0;
+}
+
+.sidehead {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  color: white;
+}
+.sidehead img{
+  height: 40%;
+  width: 40%;
+  clip-path: circle();
+}
+
+.bookslide {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  height: 50%;
+  transition: all 2s; /* Ensure smooth transition */
+}
+
+
+.bookslide img {
+  margin: 5px;
+  width: 20%;  
+  height: 30vh;
+}
+
+.facbtn {
+  display: flex;
+  justify-content: center;
+  width: 25%; /* Initial width set to 0 */
+  transition: all 2s; /* Ensure smooth transition */
+}
+
+.facbtn button{
+  border: none;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 40px;
+  color: black;
+  text-shadow: 0 1px 1px 1px black;
+  padding: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.facbtn button:hover{
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 2px 1px white;
+
+}
+
+.line{
+  border-left: 3px solid white;
+  padding-left: 5px;
+}
+
+
+  footer{
+ 
+    background-color: var(--Bereablue);
+    margin-top: 10px;
+    color: var(--white);
+    display: flex;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+
+}
+
+footer a{
+      transition: transform 0.5s ease;
+}
+
+footer a:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+  /* .tbview{
+    display: none;
+  } */
+
+  .row{
+    margin-top: 0;
+  }
+
+  .bookslide img {
+    margin: 5px;
+   
+    background-size: contain;
+
+  }
+  .sidehead{
+    display: none;
+  }
+  .Msidehead{
+    display: flex;
+  }
+  .bookslide{
+    width: 75%;
+  }
+
+}
+@media only screen and (max-width: 750px) {
+  .logo{
+    width: 100dvw;
+  }
+  .logo h3{
+    width: max-content;
+  }
+  .contents-bar{
+    display: flex;
+    width: 100%;
+   justify-content: flex-end;
+    
+  }
+  
+  .centerbox{
+    margin:0px;
+    width: 100%;
+  }
+  .centerbox nav{
+    width: 0%;
+    display: none
+  };
+}
